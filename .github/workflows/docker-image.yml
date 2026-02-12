@@ -35,7 +35,7 @@ jobs:
         
     - name: Build Docker Image
       env:
-        NEW_VERSION: ${{ steps.version.outputs.version } 
+        NEW_VERSION: ${{ steps.version.outputs.version }} 
       run: |
         docker build -t lucass10/docker-graphql:$NEW_VERSION .
         docker build -t lucass10/docker-graphql:latest .
